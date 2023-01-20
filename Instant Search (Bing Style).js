@@ -12,7 +12,7 @@ javascript:(function(){
     iframe.style.transition = "all 1s ease-in-out";
     document.body.appendChild(iframe);  
         setTimeout(function(){
-        iframe.style.top = "50px";
+        iframe.style.top = "49.5px";
         iframe.style.opacity = "1";
         nav.style.top = "0px";
         nav.style.opacity = "1";
