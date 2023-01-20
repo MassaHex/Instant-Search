@@ -47,8 +47,10 @@ javascript:(function(){
     clseBtn.style.right = "20px";
     clseBtn.style.zIndex = "9999";
     clseBtn.style.opacity = "0";
+    clseBtn.style.textShadow = "2px 2px 0px rgba(0,0,0,0.2)";
     clseBtn.style.transition = "all 1s ease-in-out";
     clseBtn.addEventListener("click", function(){
+        clseBtn.style.color = "black";
         iframe.style.top = "-500px";
         iframe.style.opacity = "0";
         nav.style.top = "-50px";
@@ -76,6 +78,7 @@ javascript:(function(){
     navText.style.cursor = "pointer";
     navText.style.transition = "all 1s ease-in-out";
     navText.style.fontWeight = "bold";
+    navText.style.textShadow = "2px 2px 0px rgba(0,0,0,0.2)";
     navText.addEventListener("click", function(){
       if (navText.style.opacity == "1") {
         navText.style.opacity = "0"
@@ -85,6 +88,16 @@ javascript:(function(){
       }
     });
     nav.appendChild(navText);
+
+    var inSearchLogo = document.createElement('img');
+    inSearchLogo.src = "https://xcde.pages.dev/assets/inSearch.svg";
+    inSearchLogo.style.floating = "right";
+    inSearchLogo.style.width = "20px";
+    inSearchLogo.style.height = "20px";
+    inSearchLogo.style.paddingBottom = "2px";
+    inSearchLogo.style.zIndex = "10001";
+    navText.appendChild(inSearchLogo);
+  
 
     var miniBtn = document.createElement('button');
     miniBtn.innerHTML = "-";
@@ -96,15 +109,18 @@ javascript:(function(){
     miniBtn.style.float = "right";
     miniBtn.style.right = "20px";
     miniBtn.style.zIndex = "10000";
+    miniBtn.style.textShadow = "2px 2px 0px rgba(0,0,0,0.2)";
     miniBtn.style.opacity = "0";
     miniBtn.style.transition = "all 1s ease-in-out";
     miniBtn.addEventListener("click", function(){
       if (iframe.style.opacity == "1") {
+        miniBtn.style.color = "black";
         iframe.style.top = "-500px";
         iframe.style.opacity = "0"
       }
       else if (iframe.style.opacity == "0") {
-        iframe.style.top = "50px";
+        miniBtn.style.color = "gray";
+        iframe.style.top = "49.5px";
         iframe.style.opacity = "1"
       }
     });
